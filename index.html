@@ -1,143 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><header style="background:#003366; color:white; padding:20px;">
-  <div style="display:flex; align-items:center; justify-content:center; gap:15px;">
-    
-    <img src="logo.png" alt="CAAL Logo" style="height:60px;">
-    
-    <div>
-      <h1 style="margin:0;">Clinical Anaesthetists Association of Lesotho (CAAL)</h1>
-      <p style="margin:0;">Advancing Safe, Ethical and High-Quality Anaesthesia Practice</p>
-    </div>
-    
-  </div>
-</header> 
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title> <img src="logo.png" alt="CAAL Logo" style="max-width:150px;"> CAAL – Clinical Anaesthetists Association of Lesotho</title>
-  <style>
-    body { font-family: Arial, sans-serif; margin: 0; }
-    header { background:#003366; color:white; padding:20px; text-align:center; }
-    nav <style> <style>
-nav ul li:hover ul {
-  display: block;
-}
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CAAL – Clinical Anaesthetists Association of Lesotho</title>
 
-nav ul li ul li a {
-  color: black;
-  text-decoration: none;
-}
-
-nav ul li ul li a:hover {
-  text-decoration: underline;
-}
+<style>
+body { margin:0; font-family:Arial, sans-serif; }
+header { background:#002f5b; color:white; padding:15px 30px; }
+.header-container { display:flex; align-items:center; gap:15px; }
+.header-container img { height:60px; }
+nav { background:#004a8f; }
+nav ul { margin:0; padding:0; list-style:none; display:flex; }
+nav ul li { position:relative; }
+nav ul li a { display:block; padding:15px 20px; color:white; text-decoration:none; }
+nav ul li:hover { background:#003366; }
+nav ul li ul { display:none; position:absolute; background:white; min-width:180px; }
+nav ul li:hover ul { display:block; }
+nav ul li ul li a { color:black; }
+.hero { background:#e6f0fa; padding:80px 20px; text-align:center; }
+.hero h1 { font-size:36px; margin-bottom:10px; }
+.hero p { font-size:18px; }
+.btn { background:#004a8f; color:white; padding:12px 25px; text-decoration:none; border-radius:5px; }
+section { padding:40px 20px; }
+.section-alt { background:#f5f5f5; }
+footer { background:#002f5b; color:white; text-align:center; padding:20px; }
+.container { max-width:1000px; margin:auto; }
 </style>
+</head>
 
-  <ul style="list-style:none; margin:0; padding:0; display:flex; gap:20px;">
+<body>
 
-    <li><a href="#home" style="color:white;">Home</a></li>
+<header>
+  <div class="header-container">
+    <img src="logo.png" alt="CAAL Logo">
+    <div>
+      <h2 style="margin:0;">Clinical Anaesthetists Association of Lesotho</h2>
+      <small>Advancing Safe Anaesthesia Practice</small>
+    </div>
+  </div>
+</header>
 
-    <li style="position:relative;">
-      <a href="#about" style="color:white;">About ▼</a>
-      <ul style="display:none; position:absolute; background:white; padding:10px; list-style:none;">
+<nav>
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li>
+      <a href="#about">About ▼</a>
+      <ul>
         <li><a href="#about">About CAAL</a></li>
         <li><a href="#vision">Vision</a></li>
         <li><a href="#mission">Mission</a></li>
       </ul>
     </li>
-
-    <li style="position:relative;">
-      <a href="#membership" style="color:white;">Membership ▼</a>
-      <ul style="display:none; position:absolute; background:white; padding:10px; list-style:none;">
-        <li><a href="#membership">Apply</a></li>
-        <li><a href="#benefits">Benefits</a></li>
+    <li>
+      <a href="#leadership">Leadership ▼</a>
+      <ul>
+        <li><a href="#leadership">Executive Committee</a></li>
       </ul>
     </li>
-
-    <li><a href="#contact" style="color:white;">Contact</a></li>
-  </style>
-</head>
-<body>
-
-</header>
-
-<nav> 
-  <a href="#home">Home</a>
-  <a href="#about">About</a>
-  <a href="#leadership">Leadership</a>
-  <a href="#membership">Membership</a>
-  <a href="#education">Education</a>
-  <a href="#resources">Resources</a>
-  <a href="#contact">Contact</a>
+    <li>
+      <a href="#membership">Membership ▼</a>
+      <ul>
+        <li><a href="#membership">Apply</a></li>
+      </ul>
+    </li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#resources">Resources</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
 </nav>
 
-<section id="home">
-  <h2>Welcome</h2>
-  <p>Welcome to the official website of CAAL, a professional body representing anaesthesia providers in Lesotho. We promote safe, ethical, and evidence-based anaesthesia practice aligned with international standards.</p>
-</section>
+<div class="hero">
+  <h1>Welcome to CAAL</h1>
+  <p>Promoting safe, ethical and high-quality anaesthesia practice in Lesotho</p>
+  <a href="#membership" class="btn">Join CAAL</a>
+</div>
 
-<section id="about" class="section-alt">
+<section id="about" class="container">
   <h2>About CAAL</h2>
-  <p>CAAL is a national professional association dedicated to advancing anaesthesia care through education, advocacy, and collaboration. We work closely with national and international stakeholders to improve patient safety and professional development.</p>
+  <p>CAAL is a professional association representing anaesthesia providers in Lesotho, committed to improving patient safety, education, and professional standards.</p>
 </section>
 
-<section id="leadership">
+<section id="vision" class="section-alt container">
+  <h2>Vision</h2>
+  <p>To be a leading professional body promoting excellence in anaesthesia care.</p>
+</section>
+
+<section id="mission" class="container">
+  <h2>Mission</h2>
+  <p>To support anaesthesia providers through education, advocacy, and collaboration.</p>
+</section>
+
+<section id="leadership" class="section-alt container">
   <h2>Executive Committee</h2>
-  <ul>
-    <li>President – Tebatso Nkoko</li>
-    <li>Secretary – Thato Lerotholi </li>
-   
-  </ul>
+  <p>President – <br>Vice President – <br>Secretary – <br>Treasurer – </p>
 </section>
 
-<section id="membership" class="section-alt">
+<section id="membership" class="container">
   <h2>Membership</h2>
-  <p>Membership is open to qualified anaesthesia providers registered in Lesotho.</p>
   <form action="https://formspree.io/f/yourID" method="POST">
-    <input type="text" name="name" placeholder="Full Name" required><br><br>
-    <input type="email" name="email" placeholder="Email" required><br><br>
-    <input type="text" name="phone" placeholder="Phone"><br><br>
-    <button class="btn" type="submit">Apply</button>
+    <input type="text" name="name" placeholder="Full Name" required style="width:100%; padding:10px; margin:10px 0;">
+    <input type="email" name="email" placeholder="Email" required style="width:100%; padding:10px; margin:10px 0;">
+    <button class="btn">Apply</button>
   </form>
 </section>
 
-<section id="education">
-  <h2>Education</h2>
-  <p>We provide workshops, and training opportunities for anaesthesia providers.</p>
+<section id="education" class="section-alt container">
+  <h2>Education & CPD</h2>
+  <p>Workshops, training, and continuous professional development programs.</p>
 </section>
 
-<section id="resources" class="section-alt">
+<section id="resources" class="container">
   <h2>Resources</h2>
   <ul>
-    <li>Anaesthesia Guidelines</li>
+    <li>Guidelines</li>
     <li>Training Materials</li>
+    <li>Constitution</li>
   </ul>
 </section>
 
-<section id="contact">
+<section id="contact" class="section-alt container">
   <h2>Contact Us</h2>
   <p>Email: info@caal.org.ls</p>
-  <p>Phone: +266 59775490</p>
-  <p>Location: Maseru, Lesotho</p>
- <h3>Send us a message</h3>
-
-  <form action="https://formspree.io/f/yourID" method="POST" style="max-width:500px;">
-    
-    <label>Full Name:</label><br>
-    <input type="text" name="name" required style="width:100%; padding:8px; margin-bottom:10px;"><br>
-
-    <label>Email Address:</label><br>
-    <input type="email" name="email" required style="width:100%; padding:8px; margin-bottom:10px;"><br>
-
-    <label>Message:</label><br>
-    <textarea name="message" rows="5" required style="width:100%; padding:8px; margin-bottom:10px;"></textarea><br>
-
-    <button type="submit" style="padding:10px 20px; background:#0055a5; color:white; border:none; border-radius:5px;">
-      Send Message
-    </button>
-
+  <form action="https://formspree.io/f/yourID" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required style="width:100%; padding:10px; margin:10px 0;">
+    <input type="email" name="email" placeholder="Your Email" required style="width:100%; padding:10px; margin:10px 0;">
+    <textarea name="message" placeholder="Your Message" required style="width:100%; padding:10px; margin:10px 0;"></textarea>
+    <button class="btn">Send</button>
   </form>
-</section>
 </section>
 
 <footer>

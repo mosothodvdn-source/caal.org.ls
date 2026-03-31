@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clinical Anaesthetists Association of Lesotho</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+    header { background: #003366; color: white; padding: 20px; text-align: center; }
+    nav { background: #0055a5; display: flex; padding: 10px; gap: 20px; }
+    nav a { color: white; text-decoration: none; font-weight: bold; }
+    nav a:hover { text-decoration: underline; }
+    section { padding: 20px; }
+    footer { background: #003366; color: white; text-align: center; padding: 10px; margin-top: 40px; }
+  </style>
+</head>
+<body onload="showSection('home')">
+<script>
+function showSection(id) {
+  const sections = document.querySelectorAll('section');
+  sections.forEach(sec => sec.style.display = 'none');
+  document.getElementById(id).style.display = 'block';
+}
+</script>
+  <header>
+    <img src="logo.png" alt="Association Logo" style="max-width:180px; margin-bottom:10px;">
+    <h1>Clinical Anaesthetists Association of Lesotho</h1>
+    <p>Strong Ethical Standards • High-Quality Holistic Anaesthetic Practice</p>
+  </header>
+
+  <nav>
+  <div class="dropdown">
+    <a href="#" onclick="showSection('home')" class="dropbtn">Home ▾</a>
+    <div class="dropdown-content">
+      <a href="#home">Overview</a>
+      <a href="#vision">Vision</a>
+      <a href="#mission">Mission</a>
+    </div>
+  </div>
+
+  <div class="dropdown">
+    <a href="#" onclick="showSection('membership')"" class="dropbtn">Membership ▾</a>
+    <div class="dropdown-content">
+      <a href="#membership">Requirements</a>
+      <a href="#membership">Apply Online</a>
+    </div>
+  </div>
+
+  <div class="dropdown">
+    <a href="#" onclick="showSection('resources')"" class="dropbtn">Resources ▾</a>
+    <div class="dropdown-content">
+      <a href="#resources">Documents</a>
+      <a href="#resources">Guidelines</a>
+      <a href="#resources">Training</a>
+    </div>
+  </div>
+
+  <div class="dropdown">
+    <a href="#" onclick="showSection('contact')"" class="dropbtn">Contact Us ▾</a>
+    <div class="dropdown-content">
+      <a href="#contact">General Contacts</a>
+      <a href="#contact">Office Location</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Gallery Dropdown Tab -->
+<nav style="background:#0055a5; display:flex; padding:10px; gap:20px;">
+  <div class="dropdown">
+    <a href="#" onclick="showSection('gallery')"" class="dropbtn">Gallery ▾</a>
+    <div class="dropdown-content">
+      <a href="#gallery">Photos</a>
+      <a href="#gallery">Events</a>
+      <a href="#gallery">Workshops</a>
+    </div>
+  </div>
+</nav>
+
+<style>
+  .dropdown { position: relative; display: inline-block; }
+  .dropbtn { color: white; text-decoration: none; padding: 10px; font-weight: bold; }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  .dropdown-content a {
+    color: black;
+    padding: 10px 14px;
+    text-decoration: none;
+    display: block;
+  }
+  .dropdown-content a:hover { background-color: #ddd; }
+  .dropdown:hover .dropdown-content { display: block; }
+  .dropdown:hover .dropbtn { text-decoration: underline; }
+</style>
+
+  <section id="home">
+    <h2>Home</h2>
+    <p>Welcome to the official website of the Clinical Anaesthetists Association of Lesotho. Our mission is to uphold high‑quality, ethical, and holistic anaesthetic practice across the nation, guided by both local and international standards.</p>
+    <h3>Vision</h3>
+    <p>To promote strong ethical standards and create an environment that empowers anaesthetists to deliver the best possible care.</p>
+    <h3>Mission</h3>
+    <p>To ensure high‑quality, holistic anaesthetic practice without discrimination, in line with guidelines regulating anaesthesia practice.</p>
+  </section>
+
+  <section id="membership">
+    <h2>Membership</h2>
+    <p>Membership is open to all clinical practitioners with anaesthetic qualifications who are registered with any health professions council in Lesotho.</p>
+    <ul>
+      <li>Apply for membership using the online form below.</li>
+      <li>Await approval from the Executive Committee.</li>
+      <li>Pay an annual subscription fee as determined by the Executive Committee.</li>
+    </ul>
+
+    <h3>Online Membership Application Form</h3>
+    <form action="#" method="post" style="max-width:500px; padding:15px; background:#f2f2f2; border-radius:8px;">
+      <label>Full Name:</label><br>
+      <input type="text" name="fullname" required style="width:100%; padding:8px; margin-bottom:10px;"><br>
+
+      <label>Email Address:</label><br>
+      <input type="email" name="email" required style="width:100%; padding:8px; margin-bottom:10px;"><br>
+
+      <label>Phone Number:</label><br>
+      <input type="text" name="phone" required style="width:100%; padding:8px; margin-bottom:10px;"><br>
+
+      <label>Professional Registration Number:</label><br>
+      <input type="text" name="regno" required style="width:100%; padding:8px; margin-bottom:10px;"><br>
+
+      <label>Qualification:</label><br>
+      <input type="text" name="qualification" required style="width:100%; padding:8px; margin-bottom:10px;"><br>
+
+      <label>Current Workplace:</label><br>
+      <input type="text" name="workplace" required style="width:100%; padding:8px; margin-bottom:10px;"><br>
+
+      <label>Comments (Optional):</label><br>
+      <textarea name="comments" style="width:100%; padding:8px; margin-bottom:10px;"></textarea><br>
+
+      <button type="submit" style="padding:10px 20px; background:#0055a5; color:white; border:none; border-radius:5px; cursor:pointer;">Submit Application</button>
+    <div class="g-recaptcha" data-sitekey="6LfKhQ4sAAAAAMUi0z18WIY02d2r4bHZQ-3ja7yh" style="margin-top:10px;"></div>
+      <br>
+      <button type="submit" style="padding:10px 20px; background:#0055a5; color:white; border:none; border-radius:5px; cursor:pointer;">Submit Application</button>
+    </form>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  </section>
+
+  <section id="resources">
+    <h2>Resources</h2>
+    <p>Here you will find key association documents, guidelines, training information, and upcoming events. (You can request additions.)</p>
+    <ul>
+      <li>Association Constitution</li>
+      <li>Anaesthesia Guidelines</li>
+      <li>Training & Continuous Professional Development</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p><strong>Office Location:</strong> Ministry of Health Headquarters, 3rd Floor, Maseru.</p>
+    <p><strong>Postal Address:</strong> P.O. Box 9189, Maseru 100, Lesotho.</p>
+    <p><strong>Email:</strong> clinicalanesthetists@gmail.com</p>
+    <p><strong>Phone:</strong> (Insert phone number)</p>
+  </section>
+
+  <footer>
+    <p>&copy; Clinical Anaesthetists Association of Lesotho</p>
+  </footer>
+  <section id="gallery">
+    <h2>Gallery</h2>
+    <p>This section will showcase photos from events, trainings, workshops, and association activities. You may request uploads or categories to add.</p>
+    <div style="display:flex; gap:15px; flex-wrap:wrap;">
+      <img src="gallery1.jpg" alt="CAAL Event Photo" style="width:300px; height:auto; border-radius:6px;">
+    </div>
+      <div style="width:200px; height:150px; background:#ddd; display:flex; align-items:center; justify-content:center;">Image 2</div>
+      <div style="width:200px; height:150px; background:#ddd; display:flex; align-items:center; justify-content:center;">Image 3</div>
+    </div>
+  </section>
+
+</body>
+</html>

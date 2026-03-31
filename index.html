@@ -18,7 +18,34 @@
   <style>
     body { font-family: Arial, sans-serif; margin: 0; }
     header { background:#003366; color:white; padding:20px; text-align:center; }
-    nav <style>
+    nav <style> <nav style="background:#0055a5; padding:10px;">
+
+  <ul style="list-style:none; margin:0; padding:0; display:flex; gap:20px;">
+
+    <li><a href="#home" style="color:white;">Home</a></li>
+
+    <li style="position:relative;">
+      <a href="#about" style="color:white;">About ▼</a>
+      <ul style="display:none; position:absolute; background:white; padding:10px; list-style:none;">
+        <li><a href="#about">About CAAL</a></li>
+        <li><a href="#vision">Vision</a></li>
+        <li><a href="#mission">Mission</a></li>
+      </ul>
+    </li>
+
+    <li style="position:relative;">
+      <a href="#membership" style="color:white;">Membership ▼</a>
+      <ul style="display:none; position:absolute; background:white; padding:10px; list-style:none;">
+        <li><a href="#membership">Apply</a></li>
+        <li><a href="#benefits">Benefits</a></li>
+      </ul>
+    </li>
+
+    <li><a href="#contact" style="color:white;">Contact</a></li>
+
+  </ul>
+
+</nav>
 nav ul li:hover ul {
   display: block;
 }

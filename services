@@ -1,1 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services - CAAL</title>
 
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<header class="header">
+  <img src="images/logo.png" class="logo">
+  <h1>Clinical Anaesthetists Association of Lesotho</h1>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="content">
+  <h2>Our Services</h2>
+
+  <h3>Professional Development</h3>
+  <p>Workshops, seminars, and continuous education programs.</p>
+
+  <h3>Advocacy</h3>
+  <p>Promoting safe anaesthesia practices across Lesotho.</p>
+
+  <h3>Research Support</h3>
+  <p>Encouraging and supporting clinical research initiatives.</p>
+
+  <h3>Training Programs</h3>
+  <p>Support for nurse anaesthesia training and capacity building.</p>
+</div>
+
+</body>
+</html>

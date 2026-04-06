@@ -3,31 +3,83 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CAAL – Clinical Anaesthetists Association of Lesotho</title>
+<title>CAAL - Home</title>
 
 <style>
-body { margin:0; font-family:Arial, sans-serif; }
+body { margin:0; font-family:Arial,sans-serif; overflow:hidden; }
 
-/* HEADER */<header>
+/* HEADER */
+header {
+  background:#00264d;
+  color:white;
+  padding:15px 30px;
+}
+
+.header-container {
+  display:flex;
+  align-items:center;
+  gap:15px;
+}
+
+.logo { height:60px; }
+
+.title-block h2 { margin:0; }
+.title-block p { margin:0; font-size:13px; opacity:0.8; }
+
+/* SLIDESHOW */
+.slide {
+  display:none;
+  height:100vh;
+}
+
+.slide img {
+  width:100%;
+  height:100vh;
+  object-fit:cover;
+}
+</style>
+</head>
+
+<body>
+
+<<header>
   <div class="header-container">
-    <img src="images/logo.png" alt="CAAL Logo" class="logo">
-
+    <img src="images/logo.png" class="logo">
     <div class="title-block">
       <h2>Clinical Anaesthetists Association of Lesotho</h2>
       <p>Advancing Safe Anaesthesia Practice</p>
     </div>
   </div>
 </header>
-header { background:#00264d; color:white; padding:15px 30px; }
-.header-container { display:flex; align-items:center; gap:15px; }
-.header-container img { height:60px; }
 
-/* NAV */
-nav { background:#003f7f; }
-nav ul { margin:0; padding:0; list-style:none; display:flex; flex-wrap:wrap; }
-nav ul li { position:relative; }
-nav ul li a { display:block; padding:15px 20px; color:white; text-decoration:none; }
-nav ul li:hover { background:#00264d; }
+<!-- SLIDESHOW ONLY -->
+<div class="slide"><img src="images/announce.jpg"></div>
+<div class="slide"><img src="images/announcement.jpg"></div>
+<div class="slide"><img src="images/picture.jpg"></div>
+<div class="slide"><img src="images/picture1.jpg"></div>
+<div class="slide"><img src="images/photo.jpg"></div>
+
+<script>
+let index = 0;
+showSlides();
+
+function showSlides() {
+  let slides = document.getElementsByClassName("slide");
+
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+
+  index++;
+  if (index > slides.length) index = 1;
+
+  slides[index-1].style.display = "block";
+  setTimeout(showSlides, 3000);
+}
+</script>
+
+</body>
+</html>
 
 /* DROPDOWN */
 nav ul li ul {
@@ -116,77 +168,6 @@ footer {
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CAAL - Home</title>
 
-<style>
-body { margin:0; font-family:Arial,sans-serif; overflow:hidden; }
-
-/* HEADER */
-header {
-  background:#00264d;
-  color:white;
-  padding:15px 30px;
-}
-
-.header-container {
-  display:flex;
-  align-items:center;
-  gap:15px;
-}
-
-.logo { height:60px; }
-
-.title-block h2 { margin:0; }
-.title-block p { margin:0; font-size:13px; opacity:0.8; }
-
-/* SLIDESHOW */
-.slide {
-  display:none;
-  height:100vh;
-}
-
-.slide img {
-  width:100%;
-  height:100vh;
-  object-fit:cover;
-}
-</style>
-</head>
-
-<body>
-
-<!-- HEADER (Requirement #2 DONE) -->
-<header>
-  <div class="header-container">
-    <img src="images/logo.png" class="logo">
-    <div class="title-block">
-      <h2>Clinical Anaesthetists Association of Lesotho</h2>
-      <p>Advancing Safe Anaesthesia Practice</p>
-    </div>
-  </div>
-</header>
-
-<!-- SLIDESHOW ONLY -->
-<div class="slide"><img src="images/announce.jpg"></div>
-<div class="slide"><img src="images/announcement.jpg"></div>
-<div class="slide"><img src="images/picture.jpg"></div>
-<div class="slide"><img src="images/picture1.jpg"></div>
-<div class="slide"><img src="images/photo.jpg"></div>
-
-<script>
-let index = 0;
-showSlides();
-
-function showSlides() {
-  let slides = document.getElementsByClassName("slide");
-
-  for (let i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-
-  index++;
-  if (index > slides.length) index = 1;
-
-  slides[index-1].style.display = "block";
-  setTimeout(showSlides, 3000);
 }
 </script>
 

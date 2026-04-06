@@ -3,163 +3,155 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CAAL – Clinical Anaesthetists Association of Lesotho</title>
+<title>CAAL - Clinical Anaesthetists Association of Lesotho</title>
 
 <style>
-body { margin:0; font-family:Arial, sans-serif; }
-header { background:#00264d; color:white; padding:15px 30px; }
-.header-container { display:flex; align-items:center; gap:15px; }
-.header-container img { height:60px; }
-nav { background:#003f7f; }
-nav ul { margin:0; padding:0; list-style:none; display:flex; }
-nav ul li { position:relative; }
-nav ul li a { display:block; padding:15px 20px; color:white; text-decoration:none; }
-nav ul li:hover { background:#00264d; }
-nav ul li ul { display:none; position:absolute; background:white; min-width:200px; box-shadow:0 4px 8px rgba(0,0,0,0.2); }
-nav ul li:hover ul { display:block; }
-nav ul li ul li a { color:black; }
-.hero { background:url('theatre.jpg') center/cover no-repeat; color:white; padding:120px 20px; text-align:center; }
-.hero h1 { font-size:42px; margin-bottom:10px; }
-.hero p { font-size:20px; }
-.btn { background:#0059b3; color:white; padding:12px 25px; text-decoration:none; border-radius:5px; }
-section { padding:50px 20px; }
-.section-alt { background:#f2f6fb; }
-.container { max-width:1100px; margin:auto; }
-.cards { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px,1fr)); gap:20px; }
-.card { background:white; padding:20px; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.1); }
-footer { background:#00264d; color:white; text-align:center; padding:20px; }
+
+/* ===== GENERAL ===== */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* ===== HEADER ===== */
+.header {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #003366;
+  color: white;
+}
+
+.logo {
+  height: 60px;
+  margin-right: 15px;
+}
+
+/* ===== NAVBAR ===== */
+nav {
+  background-color: #0055a5;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  padding: 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li:hover {
+  background-color: #003366;
+}
+
+/* ===== SLIDESHOW ===== */
+.slideshow-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.slide {
+  display: none;
+}
+
+.slide img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+/* Optional overlay text */
+.overlay {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  color: white;
+  background: rgba(0,0,0,0.5);
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
 </style>
 </head>
 
 <body>
 
-<header>
-  <div class="header-container">
-    <img src="logo.png" alt="CAAL Logo">
-    <div>
-      <h2 style="margin:0;">Clinical Anaesthetists Association of Lesotho</h2>
-      <small>Advancing Safe Anaesthesia Practice</small>
-    </div>
-  </div> 
-</script>
+<!-- ===== HEADER ===== -->
+<header class="header">
+  <img src="images/logo.png" alt="CAAL Logo" class="logo">
+  <h1>Clinical Anaesthetists Association of Lesotho (CAAL)</h1>
 </header>
 
+<!-- ===== NAVIGATION ===== -->
 <nav>
   <ul>
-    <li><a href="#">Home</a></li>
-    <li> <section>
-  <h2>Latest News</h2>
-  <div class="cards">
-    <div class="card">
-      <h3>Upcoming Training</h3>
-      <p>Details about workshop...</p>
-    </div>
-    <div class="card">
-      <h3>Conference Participation</h3>
-      <p>CAAL at regional meeting...</p>
-    </div>
-  </div>
-</section>
-      <a href="#about">About ▼</a>
-      <ul>
-        <li><a href="#about">About CAAL</a></li>
-        <li><a href="#vision">Vision</a></li>
-        <li><a href="#mission">Mission</a></li>
-      </ul>
-    </li>
-    <li><a href="#leadership">Leadership</a></li>
-    <li><a href="#membership">Membership</a></li>
-    <li><a href="#education">Education</a></li>
-    <li><a href="#resources">Resources</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="contact.html">Contact</a></li>
   </ul>
 </nav>
 
-<div class="hero">
-  <h1>Strengthening Anaesthesia Care in Lesotho</h1>
-  <p>Professional leadership, education, and advocacy for safe surgical care</p>
-  <a href="#membership" class="btn">Become a Member</a>
+<!-- ===== SLIDESHOW (HOME CONTENT ONLY) ===== -->
+<div class="slideshow-container">
+
+  <div class="slide fade">
+    <img src="images/announce.jpg" alt="Announce">
+    <div class="overlay">Announcements</div>
+  </div>
+
+  <div class="slide fade">
+    <img src="images/announcement.jpg" alt="Announcement">
+    <div class="overlay">Latest Updates</div>
+  </div>
+
+  <div class="slide fade">
+    <img src="images/picture.jpg" alt="Picture">
+  </div>
+
+  <div class="slide fade">
+    <img src="images/picture1.jpg" alt="Picture 1">
+  </div>
+
+  <div class="slide fade">
+    <img src="images/photo.jpg" alt="Photo">
+  </div>
+
 </div>
 
-<section class="container">
-  <h2>Our Focus Areas</h2>
-  <div class="cards">
-    <div class="card">
-      <h3>Education</h3>
-      <p>Continuous professional development and training programs.</p>
-    </div>
-    <div class="card">
-      <h3>Advocacy</h3>
-      <p>Promoting safe anaesthesia standards nationally.</p>
-    </div>
-    <div class="card">
-      <h3>Research</h3>
-      <p>Supporting evidence-based anaesthesia practice.</p>
-    </div>
-  </div>
-</section>
+<!-- ===== JAVASCRIPT ===== -->
+<script>
+let slideIndex = 0;
+showSlides();
 
-<section id="about" class="section-alt container">
-  <h2>About CAAL</h2>
-  <p>CAAL is the national professional association representing anaesthesia providers in Lesotho, working to improve patient safety and clinical standards.</p>
-</section>
+function showSlides() {
+  let slides = document.getElementsByClassName("slide");
 
-<section id="vision" class="container">
-  <h2>Vision</h2>
-  <p>To be a leading authority in anaesthesia practice in Africa.</p>
-</section>
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
 
-<section id="mission" class="section-alt container">
-  <h2>Mission</h2>
-  <p>To advance anaesthesia through education, advocacy, and collaboration.</p>
-</section>
+  slideIndex++;
+  if (slideIndex > slides.length) { slideIndex = 1 }
 
-<section id="leadership" class="container">
-  <h2>Executive Committee</h2>
-  <div class="cards">
-    <div class="card">President</div>
-    <div class="card">Vice President</div>
-    <div class="card">Secretary</div>
-    <div class="card">Treasurer</div>
-  </div>
-</section>
+  slides[slideIndex - 1].style.display = "block";
 
-<section id="membership" class="section-alt container">
-  <h2>Membership</h2>
-  <form action="https://formspree.io/f/yourID" method="POST">
-    <input type="text" name="name" placeholder="Full Name" required style="width:100%; padding:10px; margin:10px 0;">
-    <input type="email" name="email" placeholder="Email" required style="width:100%; padding:10px; margin:10px 0;">
-    <button class="btn">Apply</button>
-  </form>
-</section>
-
-<section id="education" class="container">
-  <h2>Education & CPD</h2>
-  <p>Workshops, conferences, and training initiatives.</p>
-</section>
-
-<section id="resources" class="section-alt container">
-  <h2>Resources</h2>
-  <div class="cards">
-    <div class="card">Guidelines</div>
-    <div class="card">Publications</div>
-    <div class="card">Training Materials</div>
-  </div>
-</section>
-
-<section id="contact" class="container">
-  <h2>Contact Us</h2>
-  <form action="https://formspree.io/f/yourID" method="POST">
-    <input type="text" name="name" placeholder="Your Name" required style="width:100%; padding:10px; margin:10px 0;">
-    <input type="email" name="email" placeholder="Your Email" required style="width:100%; padding:10px; margin:10px 0;">
-    <textarea name="message" placeholder="Your Message" required style="width:100%; padding:10px; margin:10px 0;"></textarea>
-    <button class="btn">Send</button>
-  </form>
-</section>
-
-<footer>
-  <p>&copy; 2026 CAAL | All Rights Reserved</p>
-</footer>
+  setTimeout(showSlides, 3000); // 3 seconds
+}
+</script>
 
 </body>
 </html>

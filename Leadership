@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Leadership</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="header-container">
+    <img src="images/logo.png" class="logo">
+    <div class="title-block">
+      <h2>CAAL Leadership</h2>
+      <p>Executive Committee</p>
+    </div>
+  </div>
+</header>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="leadership.html">Leadership</a>
+  <a href="education.html">Education</a>
+  <a href="resources.html">Resources</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<div class="content">
+  <h2>Executive Committee</h2>
+  <ul>
+    <li>President Tebatso Nkoko</li> 
+  
+    <li>Secretary Thato Lerotholi</li>
+   
+  </ul>
+</div>
+
+</body>
+</html>

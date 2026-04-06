@@ -3,267 +3,270 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CAAL - Home</title>
+<title>CAAL - Clinical Anaesthetists Association of Lesotho</title>
 
 <style>
-body { margin:0; font-family:Arial,sans-serif; overflow:hidden; }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
 
 /* HEADER */
 header {
-  background:#00264d;
-  color:white;
-  padding:15px 30px;
+  background: #00264d;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 25px;
 }
 
-.header-container {
-  display:flex;
-  align-items:center;
-  gap:15px;
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
-.logo { height:60px; }
-
-.title-block h2 { margin:0; }
-.title-block p { margin:0; font-size:13px; opacity:0.8; }
-
-/* SLIDESHOW */
-.slide {
-  display:none;
-  height:100vh;
+.logo {
+  height: 55px;
 }
 
-.slide img {
-  width:100%;
-  height:100vh;
-  object-fit:cover;
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 18px;
 }
-</style>
-</head>
 
-<body>
-
-<<header>
-  <div class="header-container">
-    <img src="images/logo.png" class="logo">
-    <div class="title-block">
-      <h2>Clinical Anaesthetists Association of Lesotho</h2>
-      <p>Advancing Safe Anaesthesia Practice</p>
-    </div>
-  </div>
-</header>
-
-<!-- SLIDESHOW ONLY -->
-<div class="slide"><img src="images/announce.jpg"></div>
-<div class="slide"><img src="images/announcement.jpg"></div>
-<div class="slide"><img src="images/picture.jpg"></div>
-<div class="slide"><img src="images/picture1.jpg"></div>
-<div class="slide"><img src="images/photo.jpg"></div>
-
-<script>
-let index = 0;
-showSlides();
-
-function showSlides() {
-  let slides = document.getElementsByClassName("slide");
-
-  for (let i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-
-  index++;
-  if (index > slides.length) index = 1;
-
-  slides[index-1].style.display = "block";
-  setTimeout(showSlides, 3000);
+nav ul li {
+  cursor: pointer;
+  color: white;
+  font-size: 14px;
 }
-</script>
 
-</body>
-</html>
-
-/* DROPDOWN */
-nav ul li ul {
-  display:none;
-  position:absolute;
-  background:white;
-  min-width:200px;
-  box-shadow:0 4px 8px rgba(0,0,0,0.2);
-}
-nav ul li:hover ul { display:block; }
-nav ul li ul li a { color:black; }
-
-/* HERO */
-.hero {
-  background:url('images/photo.jpg') center/cover no-repeat;
-  color:white;
-  padding:140px 20px;
-  text-align:center;
-}
-.hero h1 { font-size:42px; margin-bottom:10px; }
-.hero p { font-size:20px; }
-
-.btn {
-  background:#0059b3;
-  color:white;
-  padding:12px 25px;
-  text-decoration:none;
-  border-radius:5px;
+nav ul li:hover {
+  text-decoration: underline;
 }
 
 /* SECTIONS */
-section { padding:50px 20px; }
-.section-alt { background:#f2f6fb; }
-.container { max-width:1100px; margin:auto; }
+.section {
+  display: none;
+  padding: 20px;
+}
+
+.section.active {
+  display: block;
+}
+
+/* HOME SLIDESHOW */
+#home {
+  padding: 0;
+  height: calc(100vh - 80px);
+  position: relative;
+  overflow: hidden;
+}
+
+.slide {
+  display: none;
+  height: 100%;
+  width: 100%;
+}
+
+.slide img {
+  width: 100%;
+  height: calc(100vh - 80px);
+  object-fit: cover;
+}
+
+/* CONTENT PAGES */
+.content {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+}
 
 /* CARDS */
 .cards {
-  display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
-  gap:20px;
-}
-.card {
-  background:white;
-  padding:20px;
-  border-radius:10px;
-  box-shadow:0 4px 10px rgba(0,0,0,0.1);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+  margin-top: 15px;
 }
 
-/* FORM */
-input, textarea {
-  width:100%;
-  padding:10px;
-  margin:10px 0;
+.card {
+  background: #f4f7fb;
+  padding: 15px;
+  border-radius: 8px;
 }
 
 /* FOOTER */
 footer {
-  background:#00264d;
-  color:white;
-  text-align:center;
-  padding:20px;
+  background: #00264d;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 20px;
 }
 </style>
 </head>
 
 <body>
 
-
-</body>
-</html>
-
-    <li>
-      <a href="#about">About ▼</a>
-      <ul>
-        <li><a href="#about">About CAAL</a></li>
-        <li><a href="#vision">Vision</a></li>
-        <li><a href="#mission">Mission</a></li>
-      </ul>
-    </li>
-
-    <li><a href="#leadership">Leadership</a></li>
-    <li><a href="#membership">Membership</a></li>
-    <li><a href="#education">Education</a></li>
-    <li><a href="#resources">Resources</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</nav>
-
-<!-- HERO -->
-<div class="hero">
-  <h1>Strengthening Anaesthesia Care in Lesotho</h1>
-  <p>Professional leadership, education, and advocacy for safe surgical care</p>
-  <a href="#membership" class="btn">Become a Member</a>
-</div>
-
-<!-- FOCUS -->
-<section class="container">
-  <h2>Our Focus Areas</h2>
-  <div class="cards">
-    <div class="card">
-      <h3>Education</h3>
-      <p>Continuous professional development and training programs.</p>
-    </div>
-    <div class="card">
-      <h3>Advocacy</h3>
-      <p>Promoting safe anaesthesia standards nationally.</p>
-    </div>
-    <div class="card">
-      <h3>Research</h3>
-      <p>Supporting evidence-based anaesthesia practice.</p>
+<!-- HEADER -->
+<header>
+  <div class="header-left">
+    <img src="images/logo.png" class="logo" alt="CAAL Logo">
+    <div>
+      <h3>Clinical Anaesthetists Association of Lesotho</h3>
+      <small>Advancing Safe Anaesthesia Practice</small>
     </div>
   </div>
+
+  <nav>
+    <ul>
+      <li onclick="showTab('home')">Home</li>
+      <li onclick="showTab('about')">About</li>
+      <li onclick="showTab('leadership')">Leadership</li>
+      <li onclick="showTab('membership')">Membership</li>
+      <li onclick="showTab('education')">Education</li>
+      <li onclick="showTab('resources')">Resources</li>
+      <li onclick="showTab('contact')">Contact</li>
+    </ul>
+  </nav>
+</header>
+
+<!-- HOME (SLIDESHOW ONLY) -->
+<section id="home" class="section active">
+
+  <div class="slide"><img src="images/announce.jpg"></div>
+  <div class="slide"><img src="images/announcement.jpg"></div>
+  <div class="slide"><img src="images/picture.jpg"></div>
+  <div class="slide"><img src="images/picture1.jpg"></div>
+  <div class="slide"><img src="images/photo.jpg"></div>
+
 </section>
 
 <!-- ABOUT -->
-<section id="about" class="section-alt container">
-  <h2>About CAAL</h2>
-  <p>CAAL is the national professional association representing anaesthesia providers in Lesotho, working to improve patient safety and clinical standards.</p>
-</section>
-
-<!-- VISION -->
-<section id="vision" class="container">
-  <h2>Vision</h2>
-  <p>To be a leading authority in anaesthesia practice in Africa.</p>
-</section>
-
-<!-- MISSION -->
-<section id="mission" class="section-alt container">
-  <h2>Mission</h2>
-  <p>To advance anaesthesia through education, advocacy, and collaboration.</p>
+<section id="about" class="section">
+  <div class="content">
+    <h2>About CAAL</h2>
+    <p>
+      The Clinical Anaesthetists Association of Lesotho (CAAL) is dedicated to improving anaesthesia care,
+      patient safety, and professional development of anaesthesia providers in Lesotho.
+    </p>
+  </div>
 </section>
 
 <!-- LEADERSHIP -->
-<section id="leadership" class="container">
-  <h2>Executive Committee</h2>
-  <div class="cards">
-    <div class="card">President</div>
-    <div class="card">Vice President</div>
-    <div class="card">Secretary</div>
-    <div class="card">Treasurer</div>
+<section id="leadership" class="section">
+  <div class="content">
+    <h2>Leadership</h2>
+    <div class="cards">
+      <div class="card">President</div>
+      <div class="card">Vice President</div>
+      <div class="card">Secretary</div>
+      <div class="card">Treasurer</div>
+    </div>
   </div>
 </section>
 
 <!-- MEMBERSHIP -->
-<section id="membership" class="section-alt container">
-  <h2>Membership</h2>
-  <form action="https://formspree.io/f/yourID" method="POST">
-    <input type="text" name="name" placeholder="Full Name" required>
-    <input type="email" name="email" placeholder="Email" required>
-    <button class="btn">Apply</button>
-  </form>
+<section id="membership" class="section">
+  <div class="content">
+    <h2>Membership</h2>
+    <form>
+      <input type="text" placeholder="Full Name" required style="width:100%;padding:10px;margin:5px 0;">
+      <input type="email" placeholder="Email" required style="width:100%;padding:10px;margin:5px 0;">
+      <button type="submit" style="padding:10px 20px;background:#00264d;color:white;border:none;">
+        Apply
+      </button>
+    </form>
+  </div>
 </section>
 
 <!-- EDUCATION -->
-<section id="education" class="container">
-  <h2>Education & CPD</h2>
-  <p>Workshops, conferences, and nurse anaesthesia training programs (e.g., NHTC).</p>
+<section id="education" class="section">
+  <div class="content">
+    <h2>Education & CPD</h2>
+    <p>Training programs, workshops, and nurse anaesthesia education (NHTC diploma programme).</p>
+  </div>
 </section>
 
 <!-- RESOURCES -->
-<section id="resources" class="section-alt container">
-  <h2>Resources</h2>
-  <div class="cards">
-    <div class="card">Guidelines</div>
-    <div class="card">Publications</div>
-    <div class="card">Training Materials</div>
+<section id="resources" class="section">
+  <div class="content">
+    <h2>Resources</h2>
+    <div class="cards">
+      <div class="card">Clinical Guidelines</div>
+      <div class="card">Protocols</div>
+      <div class="card">Research & Publications</div>
+    </div>
   </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="container">
-  <h2>Contact Us</h2>
-  <form action="https://formspree.io/f/yourID" method="POST">
-    <input type="text" name="name" placeholder="Your Name" required>
-    <input type="email" name="email" placeholder="Your Email" required>
-    <textarea name="message" placeholder="Your Message" required></textarea>
-    <button class="btn">Send</button>
-  </form>
+<section id="contact" class="section">
+  <div class="content">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Name" style="width:100%;padding:10px;margin:5px 0;">
+      <input type="email" placeholder="Email" style="width:100%;padding:10px;margin:5px 0;">
+      <textarea placeholder="Message" style="width:100%;padding:10px;margin:5px 0;"></textarea>
+      <button style="padding:10px 20px;background:#00264d;color:white;border:none;">
+        Send
+      </button>
+    </form>
+  </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <p>&copy; 2026 CAAL | All Rights Reserved</p>
+  <p>&copy; 2026 CAAL - Clinical Anaesthetists Association of Lesotho</p>
 </footer>
+
+<script>
+
+/* TAB SWITCHING (ONLY ONE SECTION AT A TIME) */
+function showTab(tabId) {
+  let sections = document.querySelectorAll(".section");
+
+  sections.forEach(sec => {
+    sec.classList.remove("active");
+  });
+
+  document.getElementById(tabId).classList.add("active");
+
+  // restart slideshow when returning home
+  if (tabId === "home") startSlideshow();
+}
+
+/* SLIDESHOW */
+let index = 0;
+let slideInterval;
+
+function startSlideshow() {
+  clearInterval(slideInterval);
+
+  let slides = document.querySelectorAll(".slide");
+
+  function show() {
+    slides.forEach(s => s.style.display = "none");
+
+    index++;
+    if (index > slides.length) index = 1;
+
+    slides[index - 1].style.display = "block";
+  }
+
+  show();
+  slideInterval = setInterval(show, 3000);
+}
+
+/* INIT */
+startSlideshow();
+
+</script>
 
 </body>
 </html>
